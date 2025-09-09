@@ -1,0 +1,30 @@
+[
+    {
+        "id": "PYB29071979",
+        "data": {
+            "fn": "Pierre-Yves",
+            "ln": "Bernard",
+            "bd": "29/07/1979",
+            "avatar": "data/img/PYB29071979.jpg",
+            "gender": "M"
+        },
+        "rels": {
+            "mother": "AD18101956"
+        }
+    },
+    {
+        "id": "AD18101956",
+        "data": {
+            "fn": "Anne",
+            "ln": "Daiwaille",
+            "bd": "18/10/1956",
+            "avatar": null,
+            "gender": "F"
+        },
+        "rels": {
+            "children": [
+                "PYB29071979"
+            ]
+        }
+    }
+]
