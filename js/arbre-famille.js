@@ -14,7 +14,7 @@ function create(data) {
         .setCardYSpacing(150)
 
     f3Chart.setCard(f3.CardHtml)
-        .setCardDisplay([["label"]])
+        .setCardDisplay([["fn","ln"]])
         .setCardDim({h:70})
 
     f3Chart.updateTree({initial: true})
