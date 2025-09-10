@@ -12,9 +12,11 @@ function create(data) {
         .setTransitionTime(1000)
         .setCardXSpacing(250)
         .setCardYSpacing(150)
+        .setSingleParentEmptyCard(false)
+
 
     f3Chart.setCard(f3.CardHtml)
-        .setCardDisplay([["fn","ln"]])
+        .setCardDisplay([["fn","ln"],["bd"]])
         .setCardDim({h:70})
 
     f3Chart.updateTree({initial: true})
