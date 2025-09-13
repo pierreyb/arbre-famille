@@ -16,9 +16,24 @@ function create(data) {
         .setSingleParentEmptyCard(false)
 
 
+
     f3Chart.setCard(f3.CardHtml)
         .setStyle("imageCircle")
-        .setCardDisplay([["fn","ln"],["bd"]])
+        .setCardDisplay([
+            ["fn","ln"],
+            function(d) {
+                // fonction pour afficer année naissance ( - année déces)
+                const yb = d.data.yb ;
+                const yd = d.data.yd ;
+                if (yb && yd) {
+                    return `${yb} - ${yd}`;
+                } else if (yb) {
+                    return yb;
+                } else {
+                    return ''; // Aucune date disponible
+                }
+            }
+        ])
         .setCardDim({h:70})
 
     f3Chart.updateTree({initial: true})
