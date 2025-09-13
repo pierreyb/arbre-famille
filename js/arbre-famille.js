@@ -11,12 +11,13 @@ fetch('./data/data_marot.json')
 function create(data) {
     const f3Chart = f3.createChart('#FamilyChart', data)
         .setTransitionTime(1000)
-        .setCardXSpacing(250)
-        .setCardYSpacing(150)
+        .setCardXSpacing(200)
+        .setCardYSpacing(200)
         .setSingleParentEmptyCard(false)
 
 
     f3Chart.setCard(f3.CardHtml)
+        .setStyle("imageCircle")
         .setCardDisplay([["fn","ln"],["bd"]])
         .setCardDim({h:70})
 
@@ -24,8 +25,6 @@ function create(data) {
 
     // Initialisation du contrôleur search
     const searchController = new SearchController('#FamilyChart', data, updateTreeWithNewMainPerson);
-
-
 
     // with person_id this function will update the tree
     function updateTreeWithNewMainPerson(person_id, animation_initial = true) {
